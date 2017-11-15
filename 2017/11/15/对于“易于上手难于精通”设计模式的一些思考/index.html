@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="前言：写文章前没有翻尽现有文章，因为只是想借写文章的方式来整理自己的思路，顺带着既然写了就发出来看看有没有朋友愿意一起讨论。有点自私，治学态度也不严谨，抱歉了。另外转载请保留版权信息。
+作者：大WanGa
+原文地址：对于“易于上手难于精通”设计模式的一些思考 - 知乎专栏
+最近在知乎看到一位朋友谈了对“难于上手易于精通”的游戏设计方式的看法(易于上手难于精通 - 知乎专栏)，不是很赞同，一时激动也在下面回复了一些不恰当的文字，事后想想不如把自己的观点系统地整理一下，便于表达也便于与大家探讨，于是有了这样一篇文章。
+PS：写着写着发现自己的思维发散到不知道哪儿去了，那大家就不要在意主题了凑合着看吧XD。">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="大WanGa">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="对于“易于上手难于精通”设计模式的一些思考"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="大WanGaの绝对领域"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>对于“易于上手难于精通”设计模式的一些思考 - 大WanGaの绝对领域</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/11/15/对于“易于上手难于精通”设计模式的一些思考/">
+                对于“易于上手难于精通”设计模式的一些思考
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017-11-15</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>前言：写文章前没有翻尽现有文章，因为只是想借写文章的方式来整理自己的思路，顺带着既然写了就发出来看看有没有朋友愿意一起讨论。有点自私，治学态度也不严谨，抱歉了。另外转载请保留版权信息。</p>
+<p>作者：大WanGa</p>
+<p>原文地址：对于“易于上手难于精通”设计模式的一些思考 - 知乎专栏</p>
+<p>最近在知乎看到一位朋友谈了对“难于上手易于精通”的游戏设计方式的看法(易于上手难于精通 - 知乎专栏)，不是很赞同，一时激动也在下面回复了一些不恰当的文字，事后想想不如把自己的观点系统地整理一下，便于表达也便于与大家探讨，于是有了这样一篇文章。</p>
+<p>PS：写着写着发现自己的思维发散到不知道哪儿去了，那大家就不要在意主题了凑合着看吧XD。</p>
+<a id="more"></a>
+<p>一、简单粗暴的难度曲线</p>
+<p>太空侵略者和俄罗斯方块是典型的越到后面难度越高的关卡设计。用杀敌数和游玩时长简单粗暴地区分玩家与高手。因为笔者不是那个时代的人，无法评价这一设计在当时的意义，所以只能从这种设计模式的起因来分析。当时的机器是众所周知的内存极低（比如大家都知道的，精灵宝可梦的初代竟然要删除一些BUG才有办法把梦幻塞进卡带），不可能在一张卡带或一块基板里装入太多数据，另外开发套件的不成熟也导致开发游戏成本高。综合因素使得能做好一个玩法就能成为一个好游戏，所以比起在游戏里加入大量关卡，不如做好游戏玩法本身，然后靠无尽模式延长游戏时间。无疑这一模式是盈利的最佳方式，成本低，收益高，问题是玩家买不买账。后面的事情大家都清楚，NES、FC、GB什么的，就基本看不到这样的游戏了吧？</p>
+<p>以雷电为例，弹幕游戏，它靠的是敌机的安放、弹幕的设计、BOSS的设计来构造自己的游戏体验。简单粗暴地将高难度关卡设计成敌机越来越多，显然是不合适的，因为没法找出躲避路线的弹幕算不上好弹幕。东方系列为什么会有大量粉丝，原因之一就是BGM和弹幕的完美结合。别忘了，游戏是设计的产物。简单粗暴的高难度模式会出现也是迫不得已，并不能成为什么好游戏的范例。</p>
+<p>既然说到了难度曲线，接着就以此为主题接着谈谈。难度曲线，我认为它的存在有两种方式，一种是的二维、一种是三维的。二维的难度曲线是指游戏难度随游戏流程的推进而改变，难度只与游戏流程有关。三维的难度曲线是指在前者的基础上，在同一个游戏流程节点上，不同水平的玩家能够享受到不同的游戏难度，这里难度与游戏流程和玩家水平均有关。（这里的二维、三维是笔者为了方便探讨自己定义的概念，大家觉得这样定义不妥欢迎来讨论）那什么叫简单粗暴的难度曲线？我的看法是，在过去，俄罗斯方块和太空侵略者的难度曲线设计就极为简单粗暴，虽然很有效，但若是机能与开发成本允许显然还能做到更好。与前面两个游戏相对的是贪吃蛇，虽然它也有用速度来调整游戏难度的设计，但它的游戏机制本身就存在随着游戏流程推进，难度越来越高的特性。（就是指贪吃蛇吃的越多身体越长，而吃到自己的身体会死，场地又有限，所以越到后面越难）这个设计可以说是非常非常巧妙的，它在无需设计关卡与AI，食物也只需持续地随机出现的情况下就使游戏难度随流程而提升，并且这个难度提升的过程是一目了然的，而游戏的目的也无需言明：蛇的身体跟整个场地一样大了，就通关了。</p>
+<p>现在大家熟悉的“简单粗暴的难度曲线”是另一种形式：让玩家选择游戏难度，从而改变游戏里敌人的数值、玩家的数值、AI的强弱、甚至是限制玩家的能力（比如最后生还者里高难度无法使用倾听来感知僵尸的位置）、游戏的机制（比如MineCraft里高难度下玩家死亡不会复活，这使高难度下的游戏完全变成了以生存为目的，我将其称为“游戏性质的切换”）。笔者的看法是，这些手段的不合适程度依次递减，最后一项是接近最优的。但它的最优仅仅指MineCraft和类似性质的游戏，这种游戏的特征是玩过一次不算通过，在玩家厌烦之前会反反复复重开很多局，也就是不存在线性叙事、或者不以线性叙述为主的游戏类型。在笔者的评级中最后生还者的高难度模式劣于MineCraft的原因不仅是因为玩家一个能力的限制并没有对游戏体验造成太大改变（只是让杀僵尸的过程更惊险），也是因为像这样一个流程比较长、又是线性叙事的游戏，很多人不是为了奖杯不会再去玩第二遍。所以更换难度重新体验游戏流程就显得有些生硬而突兀了。而MC的游玩过程本身就是在不断地进行新游戏中度过，相比于最后生还者这种，MC中难度切换机制的存在要更为合理。</p>
+<p>无论是过去的无限关卡还是现在的开局难度切换，缺陷都在于枯燥。从头到尾只能玩同一个关卡不如有源源不断的新关卡出现、反复玩同样的剧情同样的流程不如玩一个新游戏。除此之外，游戏的魅力之一就是未知，因此单纯的数值改变，很难吸引玩家去反复玩同一个关卡。</p>
+<p>二、优雅的难度曲线</p>
+<p>在单一关卡的可玩性方面，超级马里奥兄弟系列一直走在业界的前头。比如3、4中的隐藏房间、隐藏路径，新超级马里奥兄弟与马里奥大陆3D中每关都有三枚隐藏的大金币的设计，都是兼顾探索与挑战的设计。在马里奥里新手以通关为目的，而熟练的玩家可以走难度高的路线，探索隐藏的门与水管通道，探索三枚大金币的地点与拿法，都是乐趣十足的体验。这一设计理念在任天堂的手游《马里奥RUN》里表现得淋漓尽致。在RUN中总关卡数远少于游戏机上的正统作品，但每个关卡通过设置不同颜色的金币，使得每个场景都能作为新关卡反复挑战。更加不可思议的是在RUN中玩家的操作不再是上下左右加跑跳攻击了，而是被简化到只剩一个点击的操作，马里奥的奔跑是自动的、玩家无法控制的。但这个点击不是单纯的让马里奥跳跃，而是在不同地点会触发不同动作。在平地上是世界跳，在空中是翻滚二段跳，在怪物前是以怪物为跳台做跳马动作跳得更高并且压扁怪物，在墙壁前则是蹬墙跳。此外还有攀在悬崖边缘然后翻身跳等动作。这些多样化的动作使得多样化的路线成为可能，例如利用在怪物身上跳起然后在合适的时机二段跳以勾到高处的金币。RUN更牛逼的地方在于同一个场景要够到每种金币所需的动作、或者说面临的挑战都是不同的，使得每次新颜色金币的解锁都会带给玩家不同的体验。不过这样的设计就有些极致到变态了，除了任天堂恐怕也没几家公司能做出来了。</p>
+<p>（同样是单一关卡的可玩性，还有一款游戏也是笔者极为推崇的，那就是移动平台的极速变色龙。因为不像马里奥没有设备或者梯子就难以玩到，这里就不详细介绍了，有兴趣的朋友不妨在手机里下一个试试，我想它的素质应该不会让大多数人失望的。）</p>
+<p>无疑，关卡内的隐藏要素是为进阶玩家准备的，若是能难度与探索乐趣兼备，那这样的设计就足以称得上优雅了。在此回归一下写这篇文章的初衷：“太空侵略者和俄罗斯方块能算得上易于上手难于精通”的典范吗？也许是的，但实在太粗暴、太不优雅了。到了现在的时代，除非出于特别的意图，否则任何一个完成度高的游戏都不应该以这种方式实现难度曲线的第三维度提升（参见笔者在前一节的二维、三维难度曲线的定义，第三维度指根据玩家水平改变游戏难度）。那什么样的方式是优雅的呢？笔者能力有限，同时探讨这个也不是本文重点，在此只挑自己一时间能想到的几条列出，欢迎大家就这个问题发表意见。</p>
+<p>隐藏路线的设置：适合动作游戏，所需操作不一定是什么高阶技巧，但难度肯定要更高。这里的难度可以是操作上的，也可以是解谜上的。<br>高阶技巧的设置：可能在格斗游戏里出现的多，笔者对此不熟悉就不细讲了。马里奥中的三段跳应该也算，因为每一次落地点不是那么好选择，往往第二次跳跃就被障碍物挡住了，并且第三次跳跃会高一些远一些。（但是马里奥系列虽然有这个动作，却很少在关卡设计中体现它的用处，原因应该是飞行道具的存在。那么在一个不能飞行的平台动作游戏中这种机制就比较有用武之地了，可以设置一些特殊地点只能用三段跳跳上去）此外在这里必须提一下的是，笔者认为《马里奥赛车》里的漂移加速不能归入此类，原因在后面再解释。<br>最优解的存在：比如竞速游戏中为了最短时间应当在什么地方加速什么地方用漂移漂移到什么程度，又或是在马里奥中如何掌握跳跃的时机能让自己不落地就把一连串的酷栗宝踩死、FF14中如何组合技能得到最高输出等。<br>引入人类玩家：俗话说与人斗其乐无穷，只要机制得当平衡性良好两个玩家之间总有高下之分，这时打败另一个玩家就成了简单好用的难度目标设置手段。<br>对基本动作派生的技巧给予恰当的奖励：比如一次攻击能打倒复数个怪物时奖励加倍、正确攻击所有怪物弱点奖励加倍或者伤害加倍（女神异闻录系列就是典型代表），等等。总之在一切能运用技巧的地方都设置一定的奖励，或者技巧本身就比较给力，促使玩家去练习、发掘技巧。要注意的是这里的技巧指的是对原有机制的利用，而不是增加新的隐藏机制作为技巧的实现，那样的话应当归结到第二点中。<br>策略性：这个不用说了吧。<br>对于优雅的难度曲线，暂时就说这么多。好像没有怎么提到曲线，捂脸。</p>
+<p>三、同一个游戏的多种面貌</p>
+<p>前面我为什么要特地说马里奥赛车呢，因为我认为马里奥赛车有个非常有趣的地方，就是它同时面临了两类玩家群体。一类是以休闲、联机为主，享受用道具和朋友互坑的过程，另一类是追求速度，喜欢在计时赛和网络联机中挑战更快速度。这两类玩家往往并不对立，而是互相交叉的关系。马里奥兄弟在这方面就比较单一了，联机模式和单人都强调技术，只是单人模式还包含有探索的乐趣，而联机模式的小地图里探索要素比较单薄。将探索剥离，二者并没有本质的区别。马车不同，它除了其乐融融的道具机制外，还存在一些系统预设的技巧，比如漂移加速，比如把某些道具挂在身后不发射出去以防御别人的撞击和龟壳的袭击，这些技巧都是用以满足玩家对竞速的需求的。还记得我前面评价MC的高难度模式时所说的“游戏性质的切换”吗？就是这样的情况。</p>
+<p>一个游戏无论是代码、美术还是音乐都需要成本，若是能用一个好的设计让有限的资源发挥更多的用处，那这样的设计从商业角度来看无疑是聪明的。若是还能令原有的游戏体验更具深度，那就称得上是一个优秀的设计了。在这方面MC当然是不得不提到的存在。如果是一个单纯的积木游戏（比如MagicaVoxel），或是单纯的生存游戏，不可能大红大紫到这般程度。而MC对二者的结合堪称完美，无论是高随机度的探险还是高代入感的搬砖，又或者是和小伙伴撕逼、和妹子造小窝。MC是具有如此多的面貌以至于玩家除了看故事外的需求几乎都能被满足。这也是MC能被推上神坛的原因之一。</p>
+<p>遗憾的是，这样的设计几乎是可遇不可求的。或许只有祈祷上天给予那一刹那的乍现灵光，或者自己平日里有心地试着探索。那么既然这样的设计无法复制，甚至无法作为一种既定的模式，笔者又为何要拿出来说？起初是因为反驳在本文开头提到的那位朋友的观点，但在撰写本文时发现它其实很适合引出笔者另一个观点，那就是模式的不通用性。一个游戏具有多种面貌在不违背整体体验的前提下无疑是件好事，但并不是什么游戏都适合搞成有多种面貌的。同理，“易于上手难于精通”就真的是游戏设计的金科玉律了吗？</p>
+<p>四、游戏设计是为体验服务的</p>
+<p>老生常谈了，原本应该没说这个的必要的，但是看到本文开头的链接里那位朋友发表了如下言论：</p>
+<p>一次和朋友聊天，我提到游戏机制的核心是易于上手难于精通，其他的细节在传统媒体里早就有了，并不特殊。而朋友则认为“易于上手难于精通”是一个伪命题，没做到这点的游戏也活得好好的。<br>事实真的如此吗？</p>
+<p>至少我认为，因为游戏赚钱而导致地行业畸形发展带来的一大批游戏工作者中，很多人是没有能力理解和做到“易于上手难于精通”的。</p>
+<p>本文主题探讨游戏设计，就不把原文中证明观点时的逻辑问题拿出来说了，事实上这篇文章通篇都没讲如果没做到“易于上手难于精通”为何就没有实现“游戏机制的核心”了。那么请允许笔者在此唱唱反调：“易于上手难于精通”，并不能成为好游戏的批判标准，没做到这点的游戏也并不就是糟糕的游戏。</p>
+<p>我们从单纯的易于上手来看吧。假如有这么一个游戏，它的内容就只是看风景，那这个游戏需要难于精通的部分吗？不需要吧。这个游戏叫《看火人》。又假如有这么一个游戏，它的内容就只是在朝圣的路上一步步前进，顺带与一个素不相识的陌生人互相搀扶前往终点，那这样的游戏又需要难于精通的部分吗？这个游戏叫《风之旅人》。又或者，有这样一个解谜游戏，它就是单纯的解谜而已，解完所有谜题就通关了，并不存在额外的解谜要素，只是它有复数个结局，结局的走向完全取决于几个选择的组合，而看完所有支线结局才能看到真结局的内容，所有支线结局都在透露关于真相的线索，然而你看到真结局的时候还是会被震撼。这样一个游戏，需要给它设计难于精通的部分吗？这个游戏，叫《极限脱出：9小时9个人9之门》。当然，你完全可以把真相放在额外谜题中，但选择用假结局来逐步叙述它，又有什么不可以呢？将真相放在额外谜题中这样的手法不觉得太烂熟、太缺乏想象力了吗？</p>
+<p>拜托，亲爱的朋友，游戏机制难道不是为游戏体验而服务的吗？难道所有的游戏体验都要顺从于“易于上手难于精通”这样的铁则？我们想做的游戏难道就不能没有任何令人手指发烫脑细胞爆炸的挑战、仅仅只是体验一段旅途、体验一个故事？难道我们玩游戏的目的都是为了在游戏里变得更强，就不能为了美丽的风景、独一无二的旅途、令人悲戚的故事，或是和电子女友恋爱、和电子狗狗玩耍？诚然，难度曲线中第三维度（此概念前文有叙述）的存在会让游戏能满足更多的玩家群体、让游戏具有更长的可玩时长，但有多个面貌的游戏你不也没能做出来吗？又凭什么将“难于上手”作为游戏设计的铁则呢？</p>
+<p>我并不是太单纯、太天真，觉得游戏不需要成为商业的附庸，觉得游戏可以仅仅只作为游戏而存在。只是我觉得，一个游戏只成为它应当成为的形态，就已经很好了啊。强行增加深度、强行增加时长、强行加入多人模式，这些有利于商业的行为，若是与游戏体验并不相容，又何必强行加进去呢？你能想象一个难于精通的纪念碑谷吗？能想象风之旅人里存在让玩家挑战以获取成就感的内容吗？若是要做成这样，它们还能保持原本的面貌吗？它们还能带给人们同样的感动吗？</p>
+<p>想表达的都说的差不多了，就到这里吧。为了能继续把自己的想法整理出来让自己审阅、让大家批判，我会努力写出更多有关游戏设计的文章的、但愿如此。</p>
+<p>以上。</p>
+
+    </div>
+
+    
+
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/11/15/对于“易于上手难于精通”设计模式的一些思考/">对于“易于上手难于精通”设计模式的一些思考</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/11/15/hello-world/">Hello World</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
